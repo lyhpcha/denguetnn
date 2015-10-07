@@ -1,0 +1,16 @@
+#svg1 {
+  width  : 800px ; 
+  height : 800px ;
+}
+
+.ui-content {
+    background:linear-gradient(top,#0055FF,#0099FF);
+    background:-moz-linear-gradient(top,#0055FF,#0099FF);
+    background:-webkit-linear-gradient(top,#0055FF,#0099FF);
+}
+
+#t1 {
+  background-color:#00FF00;
+  color:#0000FF;
+}
+

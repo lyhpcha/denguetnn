@@ -1,0 +1,19 @@
+var map = svg.append("g").attr("class", "map");
+var projection = d3.geo.albers()
+    .origin([3.4,46.8])
+    .scale(12000)
+    .translate([590, 570]);
+var path = d3.geo.path().projection(projection);
+d3.json('myjsonfile.json', function(json) {
+    map.selectAll('path')
+        .data(json.features)
+        .enter().append('path')
+        .attr('d', path);
+        
+    // now use the projection to project your coords
+    var coordinates = projection([mylon, mylat]);
+    map.append('svg:circle')
+        .attr('cx', coordinates[0])
+        .attr('cy', coordinates[1])
+        .attr('r', 5);
+});
